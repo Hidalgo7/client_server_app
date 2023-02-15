@@ -4,19 +4,13 @@ import socket, random
 
 PORT = 60013
 
-"""A COMPLETAR POR EL ALUMNO:
-Crear un socket y asignarle su direccion.
-"""
-embalses = [["GI317", "776", "Iker"], ["NA071", "129", "Hidlago"]]
+embalses = [["GI317", "776", "Iker"], ["NA071", "129", "Hidalgo"]]
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.bind(('', PORT))
 print("Puerto:" + str(PORT))
 
 while True:
-    """A COMPLETAR POR EL ALUMNO:
-    Recibir un mensaje y responder con el mismo.
-    """
     buf, dir_cli = s.recvfrom(1024)
     mensaje = buf.decode()
     respuesta = ""
